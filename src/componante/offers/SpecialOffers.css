@@ -1,0 +1,126 @@
+.special-offer {
+  padding: var(--main-padding);
+}
+.special-offer h2 {
+  font-size: 21px;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+.special-offer h2 .offer-icon {
+  color: var(--strong-red-color);
+  margin-right: 10px;
+}
+.special-offer h2 .offer-icon svg {
+  margin-left: 5px;
+}
+.offer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  justify-content: center;
+  gap: 30px;
+}
+/*start offer */
+.offer {
+  display: flex;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: var(--white-color);
+  color: black;
+  transition: 0.3s;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.offer:hover {
+  background-color: black;
+  color: var(--white-color);
+}
+.offer-image {
+  width: 50%;
+}
+.offer-image img {
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
+}
+.offer-info {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.offer-info .offer-title {
+  font-size: 21px;
+  margin: 15px 0;
+}
+
+.offer-info .offer-price {
+  margin: 10px 0;
+}
+.offer-info .offer-price-item {
+  font-size: 21px;
+  color: var(--strong-red-color);
+  text-decoration: line-through;
+  margin-right: 10px;
+}
+.offer-info .offer-price-discount {
+  font-size: 21px;
+  margin-right: 10px;
+}
+.offer-info .offer-see-more {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  cursor: pointer;
+  border-radius: 2px 15px;
+  margin-top: 5px;
+  padding: 0 10px;
+  transition: 0.3s;
+}
+.offer-info .offer-see-more:hover {
+  background-color: var(--info-color);
+}
+.offer-info .offer-discount {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: var(--white-color);
+  background-color: var(--info-color);
+  font-size: 24px;
+  border-radius: 50px;
+  padding: 0 10px;
+}
+/* responseve*/
+@media (max-width: 1306px) {
+  .offer-container {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    .offer {
+      flex-direction: column;
+    }
+  }
+}
+@media (max-width: 906px) {
+  .offer-container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  .offer-info .offer-discount {
+    font-size: 18px;
+    padding: 0 5px;
+  }
+}
+@media (max-width: 1150px) {
+  .offer-info .offer-discount {
+    font-size: 20px;
+    padding: 0 5px;
+  }
+}
+@media (max-width: 767px) {
+  .offer {
+    flex-direction: column;
+  }
+  .offer-info .offer-discount {
+    font-size: 16px;
+  }
+}

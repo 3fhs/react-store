@@ -1,0 +1,117 @@
+.product-description {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+.product-description-title {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+/* start single product */
+.product-in-slider {
+  padding: var(--main-padding);
+}
+.product-container {
+  display: flex;
+  align-items: center;
+  background-color: var(--white-color);
+  box-shadow: 1px 1px 12px 9px #9994;
+  border-radius: 10px;
+}
+.product-info {
+  padding: 0 20px;
+}
+.product-image {
+  position: relative;
+  background-color: var(--white-color);
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-left: 2px solid #9994;
+  border-radius: 10px;
+}
+.product-image img {
+  width: 100%;
+}
+
+.product-title {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.product-price {
+  margin: 20px 0;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.product-ratting {
+  display: flex;
+}
+.special-option {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.special-option strong {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.special-option .btn-and-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.special-option .btn-and-input input {
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+  outline: none;
+  border: 2px solid #999;
+  border-radius: 5px;
+}
+.special-option .btn-and-input button {
+  height: 50px;
+  width: 200px;
+  border: none;
+  background-color: var(--info-color);
+  border-radius: 5px;
+  color: var(--white-color);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 820px) {
+  .product-info {
+    padding: 20px;
+  }
+  .product-image {
+    border: none;
+  }
+  .product-container {
+    flex-direction: column;
+  }
+}
+@media (max-width: 676px) {
+  .product-title {
+    font-size: 18px;
+  }
+  .rating {
+    font-size: 16px;
+  }
+  .rating-container span {
+    font-size: 16px;
+  }
+  .special-option strong {
+    font-size: 18px;
+  }
+  .special-option .btn-and-input {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .special-option .btn-and-input button {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,122 @@
+.specialoffer {
+  padding: var(--main-padding);
+}
+.special-offer-details {
+  display: flex;
+  align-items: center;
+  background-color: var(--white-color);
+  box-shadow: 1px 1px 12px 9px #9994;
+  border-radius: 10px;
+}
+.special-contair-image {
+  position: relative;
+  background-color: var(--white-color);
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-left: 2px solid #9994;
+  border-radius: 10px;
+}
+.special-contair-image img {
+  width: 50%;
+}
+.special-images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+.special-images .special-image {
+  width: 100px;
+  border: 2px solid #9994;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* start info */
+.special-contair-info {
+  padding: 0 20px;
+}
+.special-title {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.special-price {
+  margin: 20px 0;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.after-price {
+  color: var(--strong-red-color);
+  text-decoration: line-through;
+}
+.before-price {
+}
+.special-option {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.special-option strong {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.special-option .btn-and-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.special-option .btn-and-input input {
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+  outline: none;
+  border: 2px solid #999;
+  border-radius: 5px;
+}
+.special-option .btn-and-input button {
+  height: 50px;
+  width: 200px;
+  border: none;
+  background-color: var(--info-color);
+  border-radius: 5px;
+  color: var(--white-color);
+  font-size: 20px;
+}
+@media (max-width: 1200px) {
+  .special-contair-image {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .special-images {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .special-contair-image img {
+    width: 75%;
+  }
+  .special-contair-info {
+    padding: 20px;
+  }
+}
+@media (max-width: 920px) {
+  .special-contair-image img {
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .special-offer-details {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+  .special-contair-image {
+    width: 100%;
+    border-left: none;
+    border-bottom: 2px solid #9994;
+  }
+}

@@ -1,0 +1,27 @@
+/*empty-page*/
+.empty-page {
+  height: 50vh;
+  padding: var(--main-padding);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.empty-page h1 {
+  color: var(--primary-color);
+  padding: 10px;
+}
+.empty-page p {
+  color: var(--secondary-color);
+  font-size: 25px;
+  font-weight: 500;
+}
+.empty-page a {
+  cursor: pointer;
+  background-color: var(--info-color);
+  margin: 20px 0;
+  padding: 10px;
+  color: var(--white-color);
+  border-radius: 5px;
+}

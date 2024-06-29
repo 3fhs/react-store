@@ -1,0 +1,31 @@
+.categories {
+  display: flex;
+  gap: 30px;
+  padding: 10px 30px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.category-body {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white-color);
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+.category-body img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+.category-body h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
