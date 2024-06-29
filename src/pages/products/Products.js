@@ -19,7 +19,7 @@ function Products() {
 
   useEffect(() => {
     dispatch(fetchProduct());
-  }, []);
+  }, [dispatch]);
 
   // i make filter
   const filterProducts = products.filter((product) =>

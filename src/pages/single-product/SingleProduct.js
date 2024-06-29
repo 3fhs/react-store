@@ -37,7 +37,7 @@ function SingleProduct() {
 
     // i need open in page scroll up
     window.scrollTo(0, 0);
-  }, [id]);
+  }, [dispatch, id]);
 
   // const product = products.find((p) => p.id === +id);
 

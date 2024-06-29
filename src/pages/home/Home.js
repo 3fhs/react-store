@@ -29,7 +29,7 @@ function Home() {
   useEffect(() => {
     // fetchProducts();
     dispatch(fetchProduct());
-  }, []);
+  }, [dispatch]);
 
   const laptop = products.filter((p) => p.islaptop === true);
   const mobile = products.filter((p) => p.islaptop === false);

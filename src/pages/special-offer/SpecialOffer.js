@@ -24,7 +24,7 @@ function SpecialOffer() {
   useEffect(() => {
     // i need open in page scroll up
     window.scrollTo(0, 0);
-  }, []);
+  }, [dispatch]);
 
   //add to cart handel
   const handelAddToCart = () => {
