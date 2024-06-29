@@ -67,38 +67,53 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
   font-size: 20px;
   padding: 5px;
   margin-bottom: 20px;
 }
 .page {
-  border: 2px solid #777;
+  border: 1px solid var(--white-color);
   padding: 0 5px;
-  border-radius: 5px;
   background-color: darkgray;
-  color: black;
   cursor: pointer;
+  color: white;
+  font-weight: bold;
 }
 .active {
   background-color: var(--white-color);
+  color: black;
+  border: 1px solid darkgray;
 }
 .btn-pagination-next,
 .btn-pagination-prev {
-  border: 2px solid #777;
+  border: none;
   padding: 0 5px;
-  border-radius: 5px;
   background-color: darkgray;
-  color: black;
+  color: white;
   cursor: pointer;
   outline: none;
   display: flex;
   align-items: center;
   font-size: 18px;
+  height: 40px;
+  position: relative;
 }
 .btn-pagination-next svg,
 .btn-pagination-prev svg {
-  font-size: 30px;
+  font-size: 40px;
+  position: absolute;
+  color: black;
+  height: 40px;
+  background-color: darkgray;
+  padding: 0 5px;
+}
+.btn-pagination-next svg {
+  right: -25px;
+  border-radius: 0 5px 5px 0;
+}
+.btn-pagination-prev svg {
+  left: -25px;
+  border-radius: 5px 0 0 5px;
 }
 /*end*/
 @media (max-width: 935px) {
