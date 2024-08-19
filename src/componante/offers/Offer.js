@@ -14,6 +14,8 @@ function Offer({ offers }) {
     id,
   } = offers;
 
+  const priceDis = price - (discount * price) / 100;
+
   const [imageSrc, setImageSrc] = useState(firstImage);
 
   return (
@@ -32,12 +34,10 @@ function Offer({ offers }) {
         <div className="offer-price">
           <strong> السعر </strong>
           <b className="offer-price-item">{price} $</b>
-          <b className="offer-price-discount">
-            {price - (discount * price) / 100} $
-          </b>
+          <b className="offer-price-discount">{priceDis} $</b>
         </div>
         <Link to={`/special-offer/${id}`} className="offer-see-more">
-          ... شاهد المزيد
+          شاهد المزيد ....
         </Link>
         <div className="offer-discount"> خصم{discount} %</div>
       </div>

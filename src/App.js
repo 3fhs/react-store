@@ -1,7 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Footer from "./componante/footer/Footer";
-import Header from "./componante/header/Header";
 import Home from "./pages/home/Home";
 import Electro from "./pages/electro/Electro";
 import Kitchen from "./pages/kitchen/Kitchen";
@@ -11,11 +9,13 @@ import Cart from "./pages/cart/Cart";
 import Products from "./pages/products/Products";
 import SingleProduct from "./pages/single-product/SingleProduct";
 import SpecialOffer from "./pages/special-offer/SpecialOffer";
+import Login from "./pages/forms/Login";
+import Register from "./pages/forms/Register";
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      {/* <Header /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
@@ -26,8 +26,10 @@ function App() {
         <Route path="/kitchen" element={<Kitchen />} />
         <Route path="/manwear" element={<ManWear />} />
         <Route path="/womenwear" element={<WomenWear />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

@@ -15,7 +15,7 @@ function MiddleHeader() {
         <button className="search-btn">بحث</button>
       </div>
       <Link to="/cart" className="middle-header-shopping">
-        السلة
+        سلة المشتريات
         <FontAwesomeIcon icon={faCartPlus} />
         {cartItems.length > 0 && (
           <span className="cart-number">{cartItems.length}</span>

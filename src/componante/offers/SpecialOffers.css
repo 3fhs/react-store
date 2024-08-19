@@ -3,11 +3,14 @@
 }
 .special-offer h2 {
   font-size: 21px;
-  color: var(--primary-color);
+  color: black;
   margin-bottom: 15px;
+  background-image: linear-gradient(45deg, black 20%, white 100%);
+  border-radius: 5px;
+  padding: 5px 10px;
 }
 .special-offer h2 .offer-icon {
-  color: var(--strong-red-color);
+  color: #c43516;
   margin-right: 10px;
 }
 .special-offer h2 .offer-icon svg {
@@ -32,7 +35,7 @@
   position: relative;
 }
 .offer:hover {
-  background-color: black;
+  background-color: var(--primary-color);
   color: var(--white-color);
 }
 .offer-image {
@@ -72,7 +75,7 @@
   font-size: 20px;
   font-weight: 500;
   color: var(--white-color);
-  background-color: var(--primary-color);
+  background-color: black;
   cursor: pointer;
   border-radius: 2px 15px;
   margin-top: 5px;
@@ -122,5 +125,8 @@
   }
   .offer-info .offer-discount {
     font-size: 16px;
+  }
+  .special-offer h2 {
+    text-align: center;
   }
 }

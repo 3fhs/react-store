@@ -17,7 +17,6 @@
   background-color: var(--white-color);
   border-radius: 10px;
   padding: 5px;
-  cursor: pointer;
 }
 .category-body img {
   width: 100px;
@@ -28,4 +27,37 @@
 .category-body h2 {
   font-size: 20px;
   font-weight: 500;
+  position: relative;
+}
+.category-body h2::after,
+.category-body h2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.category-body h2::after {
+  width: 55px;
+  height: 4px;
+  background-color: var(--info-color);
+  bottom: -10px;
+}
+.category-body h2::before {
+  width: 16px;
+  height: 16px;
+  background-color: #69a3e5;
+  border-radius: 50%;
+  bottom: -16px;
+  z-index: 2;
+}
+@media (max-width: 768px) {
+  .categories {
+    padding: 10px 10px;
+  }
+  .category-body {
+    width: 150px;
+  }
+  .category-body h2 {
+    font-size: 18px;
+  }
 }

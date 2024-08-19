@@ -1,19 +1,13 @@
 import React from "react";
+import "./title.css";
 
 function TitleHeading({ title }) {
   return (
-    <div style={headTitle}>
-      <h2 style={titleStyle}>{title}</h2>
+    <div className="head-title">
+      <h2 className="title-style">{title}</h2>
+      <i className="bi bi-chevron-double-down moving-icon"></i>
     </div>
   );
 }
-
-const headTitle = {
-  marginRight: "20px",
-  marginTop: "40px",
-};
-const titleStyle = {
-  color: "var(--primary)",
-};
 
 export default TitleHeading;

@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import "./Slider.css";
-import Rating from "./ratingslider/Rating";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import Ratting from "../ratting/Ratting";
 
 function Slider({ data }) {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -33,7 +33,7 @@ function Slider({ data }) {
           <Link to={`/products/${slide.id}`} className="slide" key={slide.id}>
             <img src={slide.image} alt={slide.title} className="slide-img" />
             <h3 className="slide-title">{slide.title}</h3>
-            <Rating rating={slide.rating} reviews={slide.reviews} />
+            <Ratting rating={slide.rating} reviews={slide.reviews} />
             <div className="slide-price">
               <span>السعر</span>
               {slide.price} $

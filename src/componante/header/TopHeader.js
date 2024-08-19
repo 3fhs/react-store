@@ -1,9 +1,9 @@
 import React from "react";
 import "./Header.css";
-import { faBasketShopping } from "@fortawesome/free-solid-svg-icons/faBasketShopping";
 import { faBars } from "@fortawesome/free-solid-svg-icons/faBars";
 import { faPhone } from "@fortawesome/free-solid-svg-icons/faPhone";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 function TopHeader({ setOpenMinu }) {
   return (
@@ -11,14 +11,12 @@ function TopHeader({ setOpenMinu }) {
       <div className="top-header-menu" onClick={() => setOpenMinu(true)}>
         <FontAwesomeIcon icon={faBars} />
       </div>
-      <div className="top-header-logo">
-        <FontAwesomeIcon icon={faBasketShopping} />
-        السوق المصرى
-      </div>
+      <Link to="/" className="top-header-logo">
+        MHM
+      </Link>
       <div className="top-header-text">اهلا و سهلا نورتونا</div>
       <div className="top-header-phone">
-        123-456-789
-        <FontAwesomeIcon icon={faPhone} />
+        {""}20/11111{""} <FontAwesomeIcon icon={faPhone} />
       </div>
     </div>
   );

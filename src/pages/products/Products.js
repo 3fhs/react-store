@@ -5,6 +5,8 @@ import ProductList from "./ProductList";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProduct } from "../../redux/apiCalls/ProductCallApi";
 import PaginationNumber from "./PaginationNumber";
+import Header from "../../componante/header/Header";
+import Footer from "../../componante/footer/Footer";
 
 function Products() {
   const dispatch = useDispatch();
@@ -47,6 +49,7 @@ function Products() {
 
   return (
     <>
+      <Header />
       <div className="products">
         <ProductSidebar
           filterItem={filterItem}
@@ -61,6 +64,7 @@ function Products() {
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
       />
+      <Footer />
     </>
   );
 }

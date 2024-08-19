@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 10px 30px;
+  padding: 20px 30px;
 }
 .banner img {
   width: 50%;
@@ -12,14 +12,17 @@
 .banner .img-left {
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
+  box-shadow: 0 0 5px 3px #ffde59;
 }
 .banner .img-right {
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
+  box-shadow: 0 0 5px 3px #ff91d4;
 }
 @media (max-width: 920px) {
   .banner {
     flex-wrap: wrap;
+    gap: 10px;
   }
   .banner img {
     width: 100%;
@@ -29,6 +32,6 @@
 }
 @media (max-width: 767px) {
   .banner {
-    padding: 10px 10px;
+    padding: 20px 10px;
   }
 }

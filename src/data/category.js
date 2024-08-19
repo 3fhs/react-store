@@ -36,7 +36,7 @@ export const categories = [
   },
   {
     id: 8,
-    title: "قرطاسیه",
+    title: "مجلات",
     image: "/images/products/category/o4.jpg",
   },
   {

@@ -11,6 +11,8 @@
   background-color: var(--success-color);
   border-radius: 6px;
   padding: 5px 5px;
+  color: white;
+  font-weight: bold;
 }
 .rating img {
   width: 16px;
@@ -21,4 +23,6 @@
   font-size: 16px;
   padding: 5px 5px;
   border-radius: 6px;
+  color: white;
+  font-weight: bold;
 }

@@ -17,7 +17,7 @@ function SpecialOffer() {
 
   const [firstIndex, setFirstInsex] = useState(0);
   //add quantity
-  const [qty, setQty] = useState("");
+  const [qty, setQty] = useState("1");
 
   const calculatedDiscount = price - (discount * price) / 100;
 
@@ -28,11 +28,13 @@ function SpecialOffer() {
 
   //add to cart handel
   const handelAddToCart = () => {
+    const quantity = parseInt(qty, 10);
+
     dispatch(
       addToCart({
         id: id,
-        quantity: qty,
-        price: price,
+        quantity,
+        price: calculatedDiscount,
         title: title,
         image: images[0],
       })

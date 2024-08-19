@@ -1,0 +1,42 @@
+.head-title {
+  margin: 70px 20px;
+  height: 70px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title-style {
+  color: var(--primary);
+  width: fit-content;
+  border-bottom: 2px solid var(--info-color);
+  border-radius: 20px;
+  padding: 10px 20px;
+  border-top: 2px solid var(--info-color);
+  background-color: var(--white-color);
+}
+.bi-chevron-double-down {
+  position: absolute;
+  bottom: -50px;
+  font-size: xx-large;
+  color: var(--info-color);
+}
+
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.moving-icon {
+  animation: moveUpDown 1s infinite;
+}
+@media (max-width: 768px) {
+  .title-style {
+    font-size: 18px;
+  }
+}

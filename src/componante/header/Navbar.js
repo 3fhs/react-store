@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 function Navbar({ openMinu, setOpenMinu }) {
   return (
-    <div>
+    <div className="nav">
       <nav style={{ right: openMinu ? "0" : "-320px" }} className="navbar">
         <div className="navbar-menu-close">
           <FontAwesomeIcon
@@ -49,6 +49,15 @@ function Navbar({ openMinu, setOpenMinu }) {
             onClick={() => setOpenMinu(false)}
           >
             ملابس حريمى
+          </Link>
+        </ul>
+        <ul className="navbar-links">
+          <Link
+            to="/login"
+            className="navbar-link"
+            onClick={() => setOpenMinu(false)}
+          >
+            تسجيل الدخول
           </Link>
         </ul>
       </nav>
