@@ -1,15 +1,15 @@
 import React from "react";
 import "./login.css";
 import { Link } from "react-router-dom";
-import TopHeader from "../../componante/header/TopHeader";
 import Footer from "../../componante/footer/Footer";
+import TitleHeading from "../../componante/title/TitleHeading";
 
 function Login() {
   return (
     <>
-      <TopHeader />
       <div className="forms-section">
         <form className="form">
+          <TitleHeading title={" تسجيل الدخول "} />
           <div className="form-input">
             <input type="email" placeholder=" اكتب عنوان بريدك الاليكترونى " />
           </div>

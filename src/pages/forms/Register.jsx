@@ -2,14 +2,14 @@ import React from "react";
 import "./login.css";
 import { Link } from "react-router-dom";
 import Footer from "../../componante/footer/Footer";
-import TopHeader from "../../componante/header/TopHeader";
+import TitleHeading from "../../componante/title/TitleHeading";
 
 function Register() {
   return (
     <>
-      <TopHeader />
       <div className="forms-section">
         <form className="form">
+          <TitleHeading title={" انشاء مستخدم جديد "} />
           <div className="form-input">
             <input type="text" placeholder=" اكتب اسمك " />
           </div>
@@ -25,8 +25,8 @@ function Register() {
           <div className="register-btn">
             <p>
               {" "}
-              اذا كنت غير مسجل من فضلك اضغط على{" "}
-              <Link to="/login"> انشاء ايميل </Link>{" "}
+              اذا كنت مسجل بالفعل اضغط على{" "}
+              <Link to="/login"> تسجيل الدخول </Link>{" "}
             </p>
           </div>
         </form>
