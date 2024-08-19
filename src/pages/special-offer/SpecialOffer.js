@@ -6,6 +6,8 @@ import ProductDiscription from "../single-product/ProductDiscription";
 import "./SpecialOffer.css";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/apiCalls/CartApi";
+import Header from "../../componante/header/Header";
+import Footer from "../../componante/footer/Footer";
 
 function SpecialOffer() {
   const dispatch = useDispatch();
@@ -42,56 +44,60 @@ function SpecialOffer() {
   };
 
   return (
-    <div className="specialoffer">
-      <div className="special-offer-details">
-        <div className="special-contair-image">
-          <img
-            src={prodParams.images[firstIndex]}
-            alt=""
-            className="first-image"
-          />
-          <div className="special-images">
-            {images.map((source, index) => (
-              <img
-                className="special-image"
-                key={index}
-                src={source}
-                alt=""
-                onClick={() => setFirstInsex(index)}
-              />
-            ))}
+    <>
+      <Header />
+      <div className="specialoffer">
+        <div className="special-offer-details">
+          <div className="special-contair-image">
+            <img
+              src={prodParams.images[firstIndex]}
+              alt=""
+              className="first-image"
+            />
+            <div className="special-images">
+              {images.map((source, index) => (
+                <img
+                  className="special-image"
+                  key={index}
+                  src={source}
+                  alt=""
+                  onClick={() => setFirstInsex(index)}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="special-contair-info">
-          <h3 className="special-title">{title}</h3>
-          <Ratting rating={rating} reviews={reviews} />
-          <div className="special-price">
-            <strong> السعر </strong>
-            <span className="after-price"> {price} $</span>
-            <span className="before-price"> {calculatedDiscount} $</span>
-          </div>
-          <div className="special-option">
-            <strong> الكمية </strong>
-            <div className="btn-and-input">
-              <input
-                value={qty}
-                onChange={(e) => setQty(e.target.value)}
-                type="number"
-                min="1"
-                max="10"
-              />
-              <button onClick={handelAddToCart} className="add-to-cart">
-                {" "}
-                اضف الى سلتك{" "}
-              </button>
+          <div className="special-contair-info">
+            <h3 className="special-title">{title}</h3>
+            <Ratting rating={rating} reviews={reviews} />
+            <div className="special-price">
+              <strong> السعر </strong>
+              <span className="after-price"> {price} $</span>
+              <span className="before-price"> {calculatedDiscount} $</span>
+            </div>
+            <div className="special-option">
+              <strong> الكمية </strong>
+              <div className="btn-and-input">
+                <input
+                  value={qty}
+                  onChange={(e) => setQty(e.target.value)}
+                  type="number"
+                  min="1"
+                  max="10"
+                />
+                <button onClick={handelAddToCart} className="add-to-cart">
+                  {" "}
+                  اضف الى سلتك{" "}
+                </button>
+              </div>
             </div>
           </div>
         </div>
+        <div className="special-text">
+          <ProductDiscription />
+        </div>
       </div>
-      <div className="special-text">
-        <ProductDiscription />
-      </div>
-    </div>
+      <Footer />
+    </>
   );
 }
 

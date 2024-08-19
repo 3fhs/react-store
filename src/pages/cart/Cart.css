@@ -42,10 +42,12 @@
   display: flex;
   gap: 20px;
   padding: 20px;
-  border-top: 2px solid #9994;
-  border-bottom: 2px solid #9994;
   align-items: center;
   position: relative;
+  background-color: var(--info-color);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  color: white;
 }
 .cart-image img {
   width: 350px;
@@ -55,7 +57,7 @@
 .cart-item-title {
   font-size: 18px;
   font-weight: bold;
-  color: var(--info-color);
+  color: white;
   margin-bottom: 10px;
 }
 .cart-item-quantity {

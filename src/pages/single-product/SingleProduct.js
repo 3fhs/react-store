@@ -7,6 +7,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchProductById } from "../../redux/apiCalls/ProductCallApi.js";
 import Spinner from "../../componante/spinner/Spinner.js";
 import { addToCart } from "../../redux/apiCalls/CartApi.js";
+import Header from "../../componante/header/Header.js";
+import Footer from "../../componante/footer/Footer.js";
 
 function SingleProduct() {
   const { id } = useParams();
@@ -41,48 +43,52 @@ function SingleProduct() {
   if (loading) return <Spinner />;
 
   return (
-    <div className="product-in-slider">
-      <div className="product-container">
-        <div className="product-image">
-          <img src={product?.image} alt={product && product.title} />
-        </div>
-        <div className="product-info">
-          <h3 className="product-title">{product?.title}</h3>
-          <div className="product-ratting">
-            <Ratting
-              rating={product && product.rating}
-              reviews={product && product.reviews}
-            />
+    <>
+      <Header />
+      <div className="product-in-slider">
+        <div className="product-container">
+          <div className="product-image">
+            <img src={product?.image} alt={product && product.title} />
           </div>
-          <div className="product-price">
-            {" "}
-            السعر {product && product.price} $
-          </div>
-          <div className="special-option">
-            <strong> الكمية </strong>
-            <div className="btn-and-input">
-              <input
-                value={qty}
-                onChange={(e) => setQty(e.target.value)}
-                type="number"
-                min="1"
-                max="10"
+          <div className="product-info">
+            <h3 className="product-title">{product?.title}</h3>
+            <div className="product-ratting">
+              <Ratting
+                rating={product && product.rating}
+                reviews={product && product.reviews}
               />
-              <button
-                onClick={handelAddToCart}
-                className="add-to-cart"
-                min="1"
-                max="10"
-              >
-                {" "}
-                اضف الى سلتك{" "}
-              </button>
+            </div>
+            <div className="product-price">
+              {" "}
+              السعر {product && product.price} $
+            </div>
+            <div className="special-option">
+              <strong> الكمية </strong>
+              <div className="btn-and-input">
+                <input
+                  value={qty}
+                  onChange={(e) => setQty(e.target.value)}
+                  type="number"
+                  min="1"
+                  max="10"
+                />
+                <button
+                  onClick={handelAddToCart}
+                  className="add-to-cart"
+                  min="1"
+                  max="10"
+                >
+                  {" "}
+                  اضف الى سلتك{" "}
+                </button>
+              </div>
             </div>
           </div>
         </div>
+        <ProductDiscription />
       </div>
-      <ProductDiscription />
-    </div>
+      <Footer />
+    </>
   );
 }
 
